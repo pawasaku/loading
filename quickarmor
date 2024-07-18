@@ -1,0 +1,37 @@
+local player = game.Players.LocalPlayer
+local character = player.Character or player.CharacterAdded:Wait()
+local humanoidRootPart = character:WaitForChild("HumanoidRootPart")
+local shopItem = game.Workspace.Ignored.Shop:FindFirstChild("[High-Medium Armor] - $2440")
+
+local function teleportAndClick()
+    if shopItem then
+        local originalPosition = humanoidRootPart.CFrame
+
+        if not shopItem:FindFirstChild("PrimaryPart") then
+            local primaryPart = shopItem:FindFirstChildWhichIsA("BasePart")
+            if primaryPart then
+                shopItem.PrimaryPart = primaryPart
+            else
+                return
+            end
+        end
+
+        humanoidRootPart.CFrame = shopItem.PrimaryPart.CFrame
+        wait(0.2)
+
+        local clickDetector = shopItem:FindFirstChildOfClass("ClickDetector")
+
+        if clickDetector then
+            fireclickdetector(clickDetector)
+            humanoidRootPart.CFrame = originalPosition
+        end
+    end
+end
+
+local UserInputService = game:GetService("UserInputService")
+
+UserInputService.InputBegan:Connect(function(input, gameProcessedEvent)
+    if not gameProcessedEvent and input.KeyCode == Enum.KeyCode.F1 then
+        teleportAndClick()
+    end
+end)
