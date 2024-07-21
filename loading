@@ -52,7 +52,7 @@ TextLabel.BackgroundTransparency = 1.000
 TextLabel.Position = UDim2.new(0.387811601, 0, -0.0344827585, 0)
 TextLabel.Size = UDim2.new(0, 87, 0, 29)
 TextLabel.Font = Enum.Font.Code
-TextLabel.Text = "Roundix"
+TextLabel.Text = "zynnix"
 TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
 TextLabel.TextScaled = true
 TextLabel.TextSize = 14.000
@@ -175,7 +175,7 @@ local sound = Instance.new("Sound")
 sound.SoundId = "rbxassetid://140910211"
 sound.Parent = game:GetService("SoundService")
 sound:Play()
-    wait(1)
+    wait(0.6)
     script.Parent:TweenSize(UDim2.new(0, 88,0, 26))
     script.Parent.Parent.Parent.LoadingText.Text = "best dh script is loading..."
         local sound = Instance.new("Sound")
@@ -242,7 +242,7 @@ local sound = Instance.new("Sound")
 sound.SoundId = "rbxassetid://140910211"
 sound.Parent = game:GetService("SoundService")
 sound:Play()
-    wait(1.3)
+    wait(1.1)
 
 
     script.Parent:TweenSize(UDim2.new(0, 165,0, 26))
@@ -313,7 +313,7 @@ sound.SoundId = "rbxassetid://140910211"
 sound.Parent = game:GetService("SoundService")
 sound:Play()
 
-    wait(1.5)
+    wait(1.3)
     script.Parent:TweenSize(UDim2.new(1,0,1,0))
     script.Parent.Parent.Parent.LoadingText.Text = "done!"
         local sound = Instance.new("Sound")
@@ -380,9 +380,9 @@ local sound = Instance.new("Sound")
 sound.SoundId = "rbxassetid://140910211"
 sound.Parent = game:GetService("SoundService")
 sound:Play()
-    wait(2)
-    goingDownxd:TweenPosition(UDim2.new(0.493, 0,1.07, 0))
     wait(1)
+    goingDownxd:TweenPosition(UDim2.new(0.493, 0,1.07, 0))
+    wait(0.6)
     script.Parent.Parent.Parent.Parent.Parent.azureLoader:Destroy()
 end
 coroutine.wrap(TFOQWM_fake_script)()
